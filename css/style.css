@@ -16,7 +16,7 @@ img {
 	border-style:none;
 }
 a {
-	color:#000;
+	color:#26ade6;
 	text-decoration: underline;
 	outline:none;
 }
@@ -131,8 +131,8 @@ small {
 	padding: 97px 0 0;
 }
 #footer {
-	background: #fff;
-	padding: 10px 0;
+	background: #ebebeb;
+	padding: 49px 0;
 }
 .container{
 	max-width: 1020px;
@@ -203,6 +203,7 @@ small {
 .section-title {
 	font: 44px/48px 'pf_din_text_cond_promedium', sans-serif;
 	text-transform: uppercase;
+	margin: 0 0 5px;
 }
 .main-promo .section-title {
 	font-size: 33px;
@@ -312,7 +313,7 @@ small {
 	background-position: -8px 0;
 }
 .section-how-work {
-	padding: 88px 0;
+	padding: 88px 0 93px;
 }
 .section-how-work .section-title {
 	margin: 0 0 24px;
@@ -423,12 +424,414 @@ small {
 	font-weight: lighter;
 }
 
+.booking-section {
+	background: #94c11f;
+	color: #fff;
+	padding: 49px 0 43px;
+}
+.booking-section .text {
+	font:40px/44px 'pf_din_text_cond_promedium', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+}
+.doctors-section {
+	padding: 88px 0 80px;
+}
+.doctors-section .section-title {
+	margin: 0 0 33px;
+}
+.doctor-slider {
+	position: relative;
+	margin: 0 0 46px;
+	padding: 0 30px;
+}
+.doctor-list {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.doctor-slider p {
+	margin: 0;
+}
+.doctor-slider .slide-wrap {
+	padding: 0 30px;
+	text-align: center;
+	margin: 0 auto;
+	max-width: 300px;
+}
+.doctor-slider .visual {
+	margin: 0 0 25px;
+}
+.doctor-slider .visual img {
+	vertical-align: top;
+	display: inline;
+	border-radius: 500px;
+}
+.doctor-slider .doctorName {
+	font:24px/30px 'pf_din_text_cond_proregular', sans-serif;
+	letter-spacing: .025em;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+}
+.doctor-slider .doctorPost {
+	color: #8e8e8e;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 300;
+}
+.all-doctors-link {
+	font-size: 16px;
+	line-height: 19px;
+}
+.slick-arrow {
+	background: url(../images/arrows2.png) no-repeat;
+	width: 25px;
+	height: 50px;
+	position: absolute;
+	top: 118px;
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	text-indent: -9999px;
+	overflow: hidden;
+	border: none;
+	z-index: 11;
+}
+.slick-prev {
+	background-position: 0 0;
+	left: -30px;
+}
+.slick-next {
+	background-position: -25px 0;
+	right: -30px;
+}
+.slick-prev:hover {
+	background-position: 0 -50px;
+}
+.slick-next:hover {
+	background-position: -25px -50px;
+}
+.write-section {
+	background: #8fb924;
+	color: #fff;
+	padding: 36px 0 0;
+}
+.write-description {
+	font:40px/50px 'pf_din_text_cond_prolight', sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 6px;
+	padding: 3px 0 0;
+}
+.write-title {
+	font:40px/44px 'pf_din_text_cond_promedium', sans-serif;
+	margin: 0 0 22px;
+	text-transform: uppercase;
+}
+.write-text {
+	margin: 0 0 29px;
+	font-size: 18px;
+	line-height: 24px;
+}
+.write-wrap {
+	position: relative;
+	z-index: 2;
+	padding: 0 0 40px;
+}
+.write-visual {
+	position: relative;
+}
+.write-visual:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -660px;
+	background: url(../images/deco01.png) no-repeat;
+	width: 1025px;
+	height: 671px;
+}
+.write-visual img {
+	position: relative;
+	z-index: 3;
+	margin: 0 0px 0 -112px;
+	max-width: 540px;
+}
+.map-section {
+	padding: 67px 0 68px;
+}
+.section-description {
+	font:30px/33px 'pf_din_text_cond_prolight', sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 29px;
+}
+/* map */
+.subway_map {
+	z-index: 1;
+	width: 660px;
+	height: 688px;
+	position: relative;
+	margin: 9px auto 0;
+	background: url(../images/metromap.png) no-repeat;
+}
+.subway_map div {
+	display: block;
+	position: absolute;
+	height: 30px;
+	width: 24px;
+	background: url(../images/map-item.png) no-repeat;
+	z-index: 2;
+}
+.subway_map div a {
+	display: block;
+	height: 100%;
+	width: 100%
+}
+.subway_map .sub_avtovo {
+	bottom: 110px;
+	left: 141px
+}
+.subway_map .sub_kupchino {
+	bottom: 14px;
+	left: 257px
+}
+.subway_map .sub_lomonosov {
+	bottom: 105px;
+	right: 176px
+}
+.subway_map .sub_mezhdunar {
+	bottom: 103px;
+	right: 277px
+}
+.subway_map .sub_bolshevik {
+	bottom: 217px;
+	right: 87px
+}
+.subway_map .sub_dibenko {
+	bottom: 190px;
+	right: 87px
+}
+.subway_map .sub_ligov {
+	bottom: 287px;
+	right: 224px
+}
+.subway_map .sub_ligov_obvod {
+	bottom: 180px;
+	right: 277px
+}
+.subway_map .sub_pertograd {
+	top: 201px;
+	left: 258px
+}
+.subway_map .sub_grazhdan {
+	top: 67px;
+	right: 270px
+}
+.subway_map .sub_udel {
+	top: 95px;
+	left: 258px
+}
+.subway_map .sub_komendant {
+	top: 94px;
+	left: 130px
+}
+.subway_map .sub_komendant2 {
+	top: 94px;
+	left: 154px
+}
+.subway_map .sub_starder {
+	top: 120px;
+	left: 143px
+}
+.subway_map .sub_voznesenskiy {
+	top: 367px;
+	left: 258px
+}
+.subway_map .sub_varshav {
+	top: 590px;
+	left: 258px;
+}
+.subway_map .sub_ozerki {
+	top: 70px;
+	left: 257px
+}
+.subway_map .sub_prosvet {
+	top: 41px;
+	left: 257px
+}
+.subway_map .sub_bolshoi {
+	left: 30px;
+	top: 275px;
+}
+.subway_map .sub_novsmol {
+	left: 3px;
+	top: 250px;
+}
 
 
+.footer-social {
+	margin:0;
+	padding:0 0 20px;
+	list-style:none;
+}
+.footer-social li {
+	display: inline-block;
+	vertical-align: top;
+	height: 28px;
+	margin: 0 6px 0 0;
+	overflow: hidden;
+}
+.footer-social img {
+	vertical-align: top;
+}
+.footer-social a:hover img {
+	margin-top: -28px;
+}
+.footer-text {
+	max-width: 310px;
+	font-size: 11px;
+	line-height: 14px;
+}
+.footer-text .info {
+	font-size: 10px;
+	margin: 0 0 14px;
+}
+.footer-text p {
+	margin: 0 0 11px;
+}
+.footer-text address {
+	font-style: normal;
+	font-size: 12px;
+	margin: 0;
+	padding: 4px 0 0;
+}
+#footer .right {
+	text-align: right;
+}
+.footer-logo{
+	margin:0 0 28px 170px;
+	width:86px;
+	height:30px;
+	overflow:hidden;
+	display:block;
+	background:url(../images/footer-logo.png) no-repeat;
+	text-indent:9999px;
+	cursor:pointer;
+	display: inline-block;
+	vertical-align: top;
+}
+.footer-logo a{
+	height:100%;
+	display:block;
+	opacity: 0;
+}
+.footer-info {
+	font-size: 11px;
+	line-height: 19px;
+	margin: 0 0 22px;
+	max-width: 300px;
+	display: inline-block;
+	vertical-align: top;
+}
+.created {
+	margin: 0;
+}
+.created-text {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 10px;
+	line-height: 13px;
+	margin: 10px 14px 0 0;
+}
+.created-logo{
+	margin:0;
+	width:91px;
+	height:34px;
+	overflow:hidden;
+	display:block;
+	background:url(../images/created-logo.png) no-repeat;
+	text-indent:9999px;
+	cursor:pointer;
+	display: inline-block;
+	vertical-align: top;
+}
+.created-logo a{
+	height:100%;
+	display:block;
+	opacity: 0;
+}
 
 
+.popup-holder{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:50;
+}
+.popup-holder .bg{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	min-width: 300px;
+	height:100%;
+	background:#000;
+	filter: alpha(opacity=40);
+	opacity: 0.4;
+}
+.popup{
+	position:absolute;
+	left:50%;
+	top:150px;
+	width: 540px;
+	margin-left:-270px;
+	background: #fff;
+	border-radius: 5px;
+}
+.popup-head {
+	text-align: center;
+	border-bottom: 1px solid rgba(175,175,175,.23);
+	padding: 20px 50px;
+}
+.popup-title {
+	font:24px/37px 'pf_din_text_cond_promedium', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .025em;
+}
+.popup-main {
+	padding: 33px 105px 30px;
+}
+.form-row {
+	margin-bottom: 9px;
+}
+.input-holder {
+	display:block;
+	padding: 10px 15px 9px;
+	border: 1px solid #e1e1e1;
+	height: 39px;
+}
+.input-holder input {
+	float: left;
+	width: 100%;
+	padding: 0;
+	background: none;
+	border: none;
+	height: 18px;
+	font-size:14px;
+	line-height:18px;
+	color:#000;
+}
 
 
+.fs-dropdown.fs-light .fs-dropdown-selected {
+	height: auto;
+	line-height: 17px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
 
 
