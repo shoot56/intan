@@ -17,18 +17,22 @@
 		<header id="header">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-8">
-						<ul class="main-nav">
-							<li class="active"><a href="#">Акция</a></li>
-							<li><a href="#">Как мы работаем</a></li>
-							<li><a href="#">Наши специалисты</a></li>
-							<li><a href="#">Адреса центров</a></li>
-						</ul>
+					<div class="col-sm-8 header-frame">
+						<nav id="nav">
+							<ul class="main-nav">
+								<li class="active"><a href="#">Акция</a></li>
+								<li><a href="#">Как мы работаем</a></li>
+								<li><a href="#">Наши специалисты</a></li>
+								<li><a href="#">Адреса центров</a></li>
+							</ul>
+							<a href="#" class="nav-close"></a>
+						</nav>
 					</div>
 					<div class="col-sm-4">
 						<div class="header-phone">
-							<a href="#" class="callback">Заказать звонок</a>
+							<a href="#" class="callback write-popup-opener"><span>Заказать звонок</span></a>
 							<div class="phone"><a href="tel:+78127770202">+7 (812) 777 02 02</a></div>
+							<a href="#" class="nav-opener"><span></span></a>
 						</div>
 					</div>
 				</div>
@@ -38,17 +42,28 @@
 			<div class="main-promo">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-6">
+						<div class="col-sm-7 col-md-6">
 							<strong class="logo"><a href="#">ИНТАН центры имплатнации и стоматологии</a></strong>
+							<div class="visible-xs">
+								<div class="visual promo-visual">
+									<img src="images/img01.jpg" width="442" height="420" alt="image description">
+									<div class="consult-info"><span>Консультация ортодонта бесплатно</span></div>
+								</div>
+							</div>
 							<div class="section-title">Брекет-система с установкой, по выгодной цене</div>
 							<div class="text">
 								<p>В стоимость входит брекет-система American Orthodontics и установка! Брекеты – это проверенный способ сделать улыбку красивой и ровной. Наш специалист бесплатно проконсультирует вас по всем интересующим вопросам, чтобы лечение проходило легко и эффективно.</p>
 							</div>
+							<div class="visible-xs">
+								<div class="visual-help">*Продолжительность ортодонтического лечения составляет в среднем 2 года и зависит от индивидуальных показателей пациента</div>
+							</div>
 							<div class="price">14 900 <span class="rub">q</span></div>
-							<a href="#" class="btn btn-primary">ЗАписаться на прием</a>
+							<div class="btn-holder">
+								<a href="#" class="btn btn-primary write-popup-opener">ЗАписаться на прием</a>
+							</div>
 							<div class="help">Акция проходит с 01 сентября по 31 октября 2016 г.</div>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-5 col-md-6 hidden-xs">
 							<div class="visual promo-visual">
 								<img src="images/img01.jpg" width="442" height="420" alt="image description">
 								<div class="consult-info"><span>Консультация ортодонта бесплатно</span></div>
@@ -175,11 +190,11 @@
 			<section class="booking-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-7 col-md-8">
 							<div class="text">запишитесь прямо сейчас!</div>
 						</div>
-						<div class="col-sm-4 text-center">
-							<a href="#" class="btn btn-primary">ЗАписаться на прием</a>
+						<div class="col-sm-5 col-md-4 text-center">
+							<a href="#" class="btn btn-primary write-popup-opener">ЗАписаться на прием</a>
 						</div>
 					</div>
 				</div>
@@ -262,7 +277,7 @@
 								<div class="write-description">Брекет-система с установкой по выгодной цене </div>
 								<div class="write-title">всего за 14 900 рублей</div>
 								<div class="write-text">В стоимость входит брекет-система с установкой. Консультация ортодонта – бесплатно.</div>
-								<a href="#" class="btn btn-primary">ЗАписаться на прием</a>
+								<a href="#" class="btn btn-primary write-popup-opener">ЗАписаться на прием</a>
 							</div>
 						</div>
 						<div class="col-sm-5">
@@ -275,7 +290,7 @@
 				<div class="container">
 					<div class="section-title text-center">МЫ ВСЕГДА РЯДОМ</div>
 					<div class="section-description text-center">У Нас уже 18 центров</div>
-					<div class="subway_map">
+					<div class="subway_map hidden-sm hidden-xs">
 							<div class="sub_avtovo"><a href="#"></a></div>
 							<div class="sub_mezhdunar"><a href="#"></a></div>
 							<div class="sub_bolshevik"><a href="#"></a></div>
@@ -298,16 +313,221 @@
 							<div style="left:141px; bottom:60px;" class="sub_veteran"><a href="#"></a>
 						</div>
 					</div>
+					<div class="address-block visible-sm visible-xs">
+						<ul class="address-list">
+							<li>
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li>
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li>
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+							<li class="hidden">
+								<div class="address-head">
+									<span class="num">1.</span>
+									<div class="title">Комендантский пр., д. 42, корп. 1</div>
+								</div>
+								<div class="address-metro">
+									<div class="address-metro-item">Комендантский проспект</div>
+									<div class="address-metro-item">Пионерская</div>
+									<div class="address-metro-item">Старая деревня</div>
+								</div>
+							</li>
+						</ul>
+						<div class="load-more-wrap text-center">
+							<a href="#" class="load-more">Загрузить ещё</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="booking-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-8">
+						<div class="col-sm-7 col-md-8">
 							<div class="text">запишитесь прямо сейчас!</div>
 						</div>
-						<div class="col-sm-4 text-center">
-							<a href="#" class="btn btn-primary">ЗАписаться на прием</a>
+						<div class="col-sm-5 col-md-4 text-center">
+							<a href="#" class="btn btn-primary write-popup-opener">ЗАписаться на прием</a>
 						</div>
 					</div>
 				</div>
@@ -341,7 +561,7 @@
 			</div>
 		</footer>
 	</div>
-	<div class="popup-holder">
+	<div class="popup-holder" id="write-popup">
 		<div class="bg"></div>
 		<div class="popup">
 			<div class="popup-head">
