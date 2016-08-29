@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	initPlayerForm();
 	$('<div class="FixMobile"></div>').appendTo('body');
 	setTimeout(function(){
 		$('.text-slider-list').bxSlider({
@@ -39,6 +40,11 @@ $(document).ready(function(){
 		"popup_holder":"#write-popup",
 		"popup":".popup",
 		"close_btn":".close"
+	}).popup({
+		"opener":".sended-popup-opener",
+		"popup_holder":"#sended-popup",
+		"popup":".popup",
+		"close_btn":".close"
 	});
 	// active input
 	$('.input-holder input').focus(function(){
@@ -66,6 +72,10 @@ $(document).ready(function(){
 	// scroll animate
 	if($('.FixMobile').is(':visible')){
 		new WOW().init();
+	}
+	// masked input
+	if("mask" in $.fn){
+		$('.phone-input').mask("+7 (999) 999 - 99 - 99");
 	}
 	
 });
@@ -164,11 +174,11 @@ $.fn.popup = function(o){
 };
 
 function navScroll(){
-	var _top= $(window).height()-0;
 	var block = $('.section-slide');
+	var navHeight = $('#header').height();
 	var _t;
 	$(window).scroll(function(){
-		var _delta = -0;
+		var _delta = 0;
 		var _sections = [];
 		var wS = $(window).scrollTop();
 		block.each(function(){
@@ -178,27 +188,27 @@ function navScroll(){
 			if (i>0){
 				if (i==_sections.length-1){
 					if (wS>=val){
-						$('#nav li').removeClass('active');
-						$('#nav li').eq(i).addClass('active');
+						$('.main-nav li').removeClass('active');
+						$('.main-nav li').eq(i).addClass('active');
 					}
 				} else {
 					if ((wS>=val)&&(wS<_sections[i+1])){
-						$('#nav li').removeClass('active');
-						$('#nav li').eq(i).addClass('active');
+						$('.main-nav li').removeClass('active');
+						$('.main-nav li').eq(i).addClass('active');
 					}
 				}
 			} else {
-				if ((wS>= _top)&&(wS<_sections[i+1])){
-					$('#nav li').removeClass('active');
-					$('#nav li').eq(i).addClass('active');
+				if ((wS>=0)&&(wS<_sections[i+1])){
+					$('.main-nav li').removeClass('active');
+					$('.main-nav li').eq(i).addClass('active');
 				}
 			}
 		});
 	});
 	$('.main-nav a').click(function(e){
-		$('html, body').animate({scrollTop:block.eq($(this).parent().index()).offset().top}, 600);
-		e.preventDefault();
+		$('html, body').animate({scrollTop:block.eq($(this).parent().index()).offset().top - navHeight}, 600);
 		$('#header').removeClass('nav-active');
+		e.preventDefault();
 	});
 }
 yMapInitKrd = function(){
@@ -260,3 +270,63 @@ yMapInitNvr = function(){
         myMap.geoObjects.add(myPlacemark);
    }
 };
+
+
+function initPlayerForm(){
+	$('form').each(function(){
+		var form=$(this),
+		input=form.find('input'),
+		textarea=form.find('textarea');
+		form.find('.anyv').blur(function(){
+			var val=$(this).val();
+			if((/^[a-zA-Z0-9а-яА-Я\s-]{1,40}$/ig).test(val)){
+				$(this).removeClass('error');
+			}
+			else{
+				$(this).addClass('error');
+			}
+		});
+		form.on('keyup keydown', '.anyv', function(){
+			var val=$(this).val();
+			if((/^[a-zA-Z0-9а-яА-Я\s-]{1,40}$/ig).test(val)){
+				$(this).removeClass('error');
+			}
+			else{
+				$(this).addClass('error');
+			}
+		});
+		
+		
+		
+		form.submit(function(e){
+			input.trigger('blur');
+			textarea.trigger('blur');
+			if(form.find('.error').size()){
+				/*alert('error');*/
+				return false;
+			} else {
+				// $.post("feedback.php", $(this).serialize());
+				values = $(this).serialize();
+				console.log();
+				$.ajax({
+					url: "feedback.php",
+					type: "post",
+					data: values,
+					success: function(){
+						// успех
+						form.find('input[type=text], input[type=email], textarea').each(function() {
+							$(this).val('');
+							$(this).parent().removeClass('error');
+						});
+						$('form').hide();
+						$('.sended-info').show();
+					},
+					error:function(){
+						// ошибка
+					}
+				});
+				return false;
+			}
+		});
+	});
+}
