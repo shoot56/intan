@@ -34,7 +34,7 @@
 		line-height: 18px;
 		margin: 4px 20px 0 10px;
 	}
-	#main {
+	.main-promo {
 		padding-top: 66px;
 	}
 	.logo {
@@ -256,7 +256,7 @@
 	.header-phone .callback span {
 		border-bottom: 1px dashed;
 	}
-	#main {
+	.main-promo {
 		padding-top: 135px;
 	}
 	.nav-opener {
@@ -444,7 +444,8 @@
 		overflow: hidden;
 		margin: 0 0 11px;
 	}
-	.address-metro-item {
+	.address-metro-item,
+	.address-phone-item {
 		display: block;
 		margin: 0 0 3px;
 	}
@@ -498,5 +499,25 @@
 		padding-left: 30px;
 		padding-right: 30px;
 		padding-bottom: 35px;
+	}
+	.FixMobile {
+		display: none;
+	}
+}
+@media screen and (min-width: 751px){
+	.doctor-slider.two-item .slide-wrap {
+		max-width: 410px;
+	}
+	.doctor-slider.two-item .doctor-list {
+		text-align: center;
+	}
+	.doctor-slider.two-item .slick-slide,
+	.doctor-slider.two-item .doctor-list > li {
+		display: inline-block;
+		vertical-align: top;
+		width: 50% !important;
+	}
+	.doctor-slider.two-item .slick-track {
+		width: 100% !important;
 	}
 }

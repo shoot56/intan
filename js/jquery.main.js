@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$('<div class="FixMobile"></div>').appendTo('body');
 	setTimeout(function(){
 		$('.text-slider-list').bxSlider({
 			pager: false,
@@ -59,6 +60,14 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('#header').removeClass('nav-active');
 	});
+	navScroll();
+	yMapInitNvr();
+	yMapInitKrd();
+	// scroll animate
+	if($('.FixMobile').is(':visible')){
+		new WOW().init();
+	}
+	
 });
 
 
@@ -152,4 +161,102 @@ $.fn.popup = function(o){
 			}
 		})
 	});
+};
+
+function navScroll(){
+	var _top= $(window).height()-0;
+	var block = $('.section-slide');
+	var _t;
+	$(window).scroll(function(){
+		var _delta = -0;
+		var _sections = [];
+		var wS = $(window).scrollTop();
+		block.each(function(){
+			_sections.push($(this).offset().top+_delta);
+		});
+		$.each(_sections, function(i, val){
+			if (i>0){
+				if (i==_sections.length-1){
+					if (wS>=val){
+						$('#nav li').removeClass('active');
+						$('#nav li').eq(i).addClass('active');
+					}
+				} else {
+					if ((wS>=val)&&(wS<_sections[i+1])){
+						$('#nav li').removeClass('active');
+						$('#nav li').eq(i).addClass('active');
+					}
+				}
+			} else {
+				if ((wS>= _top)&&(wS<_sections[i+1])){
+					$('#nav li').removeClass('active');
+					$('#nav li').eq(i).addClass('active');
+				}
+			}
+		});
+	});
+	$('.main-nav a').click(function(e){
+		$('html, body').animate({scrollTop:block.eq($(this).parent().index()).offset().top}, 600);
+		e.preventDefault();
+		$('#header').removeClass('nav-active');
+	});
+}
+yMapInitKrd = function(){
+	if(!$('#map_krd').size())return;
+   ymaps.ready(init);
+   var myMap;
+
+   function init(){
+       myMap = new ymaps.Map("map_krd", {
+           center: [45.0411651, 38.9517059],
+           zoom: 12,
+           controls: []
+       });
+       myMap.behaviors.disable('scrollZoom');
+       myMap.controls.add('zoomControl', { left: 5, top: 5 });
+       myMap.controls.add('typeSelector');
+       var myPlacemark = new ymaps.Placemark([45.0384744, 38.9105], {
+           balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
+       }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'images/map-marker.png',
+            iconImageSize: [42, 51],
+            iconImageOffset: [-21, -25]
+        });
+        var myPlacemark1 = new ymaps.Placemark([45.0595422, 39.027488], {
+            balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
+        }, {
+             iconLayout: 'default#image',
+             iconImageHref: 'images/map-marker.png',
+             iconImageSize: [42, 51],
+             iconImageOffset: [-21, -25]
+         });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark1);
+   }
+};
+yMapInitNvr = function(){
+	if(!$('#map_nvr').size())return;
+   ymaps.ready(init);
+   var myMap;
+
+   function init(){
+       myMap = new ymaps.Map("map_nvr", {
+           center: [44.67934, 37.780805],
+           zoom: 14,
+           controls: []
+       });
+       myMap.behaviors.disable('scrollZoom');
+       myMap.controls.add('zoomControl', { left: 5, top: 5 });
+       myMap.controls.add('typeSelector');
+       var myPlacemark = new ymaps.Placemark([44.67934, 37.780805], {
+           balloonContent: 'пр. Дзержинского, д.198<br> 79-21-20'
+       }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'images/map-marker.png',
+            iconImageSize: [42, 51],
+            iconImageOffset: [-21, -25]
+        });
+        myMap.geoObjects.add(myPlacemark);
+   }
 };

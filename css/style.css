@@ -128,7 +128,6 @@ small {
 	flex: 5000 1 auto;
 	position: relative;
 	z-index: 2;
-	padding: 97px 0 0;
 }
 #footer {
 	background: #ebebeb;
@@ -141,6 +140,7 @@ small {
 	margin: 0 auto;
 }
 .main-nav {
+	white-space: nowrap;
 	margin:0;
 	padding:14px 0 10px 7px;
 	height: 48px;
@@ -184,7 +184,7 @@ small {
 	text-decoration: none;
 }
 .main-promo {
-	padding: 0 0 66px;
+	padding: 97px 0 66px;
 }
 .logo{
 	margin:0 0 39px;
@@ -771,7 +771,7 @@ small {
 	height:100%;
 	z-index:50;
 	left: -9999px;
-	top: 9999px;
+	top: -9999px;
 }
 .popup-holder .bg{
 	position: absolute;
@@ -947,6 +947,26 @@ small {
 	left: 0;
 	margin-top: -8px;
 }
+.address-phone-item {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	padding: 0 0 0 25px;
+	margin: 0 42px 0 0;
+}
+.address-phone-item:before {
+	content: '';
+	position: absolute;
+	background: url(../images/phone-ico.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 0;
+	margin-top: -8px;
+}
 .load-more-wrap {
 	font-size: 18px;
 	line-height: 24px;
@@ -1013,8 +1033,12 @@ a.load-more {
 	transform: rotate(-45deg);
 	margin: -8px 0 0;
 }
-
-
-
-
-
+.map-frame {
+	height: 640px;
+}
+.has-map {
+	padding-bottom: 0;
+}
+.doctor-slider.one-item .slide-wrap {
+	max-width: 520px;
+}
