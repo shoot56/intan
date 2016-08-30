@@ -752,8 +752,6 @@ small {
 	display: block;
 }
 
-
-
 .footer-logo a{
 	height:100%;
 	display:block;
@@ -763,7 +761,7 @@ small {
 	font-size: 11px;
 	line-height: 19px;
 	margin: 0 0 22px;
-	max-width: 300px;
+	max-width: 310px;
 	display: inline-block;
 	vertical-align: top;
 }
