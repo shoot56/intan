@@ -228,7 +228,7 @@ yMapInitKrd = function(){
        myMap.controls.add('zoomControl', { left: 5, top: 5 });
        myMap.controls.add('typeSelector');
        var myPlacemark = new ymaps.Placemark([45.0384744, 38.9105], {
-           balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
+           balloonContent: '<a target="_blank" href="http://intan.ru/kontacty/ul-70-letiya-oktyabrya-d-15/">ул. 70-летия Октября, д. 15 <br>+7 (861) 261-60-04</a>'
        }, {
             iconLayout: 'default#image',
             iconImageHref: 'images/map-marker1.png',
@@ -236,7 +236,7 @@ yMapInitKrd = function(){
             iconImageOffset: [-22, -23]
         });
         var myPlacemark1 = new ymaps.Placemark([45.0595422, 39.027488], {
-            balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
+            balloonContent: '<a target="_blank" href="http://intan.ru/kontacty/ul-vostochno-kruglikovskaya-d-46-11-/">Восточно-Кругликовская, д. 46/11; <br>+7 (861) 202-02-42</a>'
         }, {
              iconLayout: 'default#image',
              iconImageHref: 'images/map-marker1.png',
@@ -254,22 +254,31 @@ yMapInitNvr = function(){
 
    function init(){
        myMap = new ymaps.Map("map_nvr", {
-           center: [44.67934, 37.780805],
-           zoom: 14,
+           center: [44.68934, 37.782105],
+           zoom: 13,
            controls: []
        });
        myMap.behaviors.disable('scrollZoom');
        myMap.controls.add('zoomControl', { left: 5, top: 5 });
        myMap.controls.add('typeSelector');
        var myPlacemark = new ymaps.Placemark([44.67934, 37.780805], {
-           balloonContent: 'пр. Дзержинского, д.198<br> 79-21-20'
+           balloonContent: '<a target="_blank" href="http://intan.ru/kontacty/pr-dzerzhinskogo-198/">пр. Дзержинского, д.198</a>'
        }, {
             iconLayout: 'default#image',
             iconImageHref: 'images/map-marker1.png',
             iconImageSize: [44, 46],
             iconImageOffset: [-22, -23]
         });
+        var myPlacemark1 = new ymaps.Placemark([44.700903, 37.782871], {
+            balloonContent: '<a target="_blank" href="http://intan.ru/kontacty/pr-t-lenina-9b-/">пр. Ленина, д.9 Б</a>'
+        }, {
+             iconLayout: 'default#image',
+             iconImageHref: 'images/map-marker1.png',
+            iconImageSize: [44, 46],
+            iconImageOffset: [-22, -23]
+         });
         myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark1);
    }
 };
 
