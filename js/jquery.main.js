@@ -10,7 +10,7 @@ $(document).ready(function(){
 			auto: true
 		});
 		$('.text-slider').addClass('sliderActive');
-	}, 250);
+	}, 550);
 	$('.how-work-list').bxSlider({
 		pagerCustom: '#bx-pager'
 	});

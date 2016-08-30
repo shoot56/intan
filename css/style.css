@@ -1087,3 +1087,8 @@ a.load-more {
 	font-size: 22px;
 	line-height: 24px;
 }
+.address-list a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+}
