@@ -6,7 +6,7 @@ $(document).ready(function(){
 			pager: false,
 			auto: true
 		});
-	}, 100);
+	}, 250);
 	$('.how-work-list').bxSlider({
 		pagerCustom: '#bx-pager'
 	});
@@ -178,7 +178,7 @@ function navScroll(){
 	var navHeight = $('#header').height();
 	var _t;
 	$(window).scroll(function(){
-		var _delta = 0;
+		var _delta = -navHeight;
 		var _sections = [];
 		var wS = $(window).scrollTop();
 		block.each(function(){
@@ -229,7 +229,7 @@ yMapInitKrd = function(){
            balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
        }, {
             iconLayout: 'default#image',
-            iconImageHref: 'images/map-marker.png',
+            iconImageHref: 'images/map-marker1.png',
             iconImageSize: [42, 51],
             iconImageOffset: [-21, -25]
         });
@@ -238,8 +238,8 @@ yMapInitKrd = function(){
         }, {
              iconLayout: 'default#image',
              iconImageHref: 'images/map-marker.png',
-             iconImageSize: [42, 51],
-             iconImageOffset: [-21, -25]
+             iconImageSize: [44, 46],
+             iconImageOffset: [-22, -23]
          });
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark1);
@@ -263,9 +263,9 @@ yMapInitNvr = function(){
            balloonContent: 'пр. Дзержинского, д.198<br> 79-21-20'
        }, {
             iconLayout: 'default#image',
-            iconImageHref: 'images/map-marker.png',
-            iconImageSize: [42, 51],
-            iconImageOffset: [-21, -25]
+            iconImageHref: 'images/map-marker1.png',
+            iconImageSize: [44, 46],
+            iconImageOffset: [-22, -23]
         });
         myMap.geoObjects.add(myPlacemark);
    }
@@ -320,6 +320,13 @@ function initPlayerForm(){
 						});
 						$('form').hide();
 						$('.sended-info').show();
+						setTimeout(function(){
+							$('.popup .close').click();
+						}, 1800);
+						setTimeout(function(){
+							$('form').show();
+							$('.sended-info').hide();
+						}, 2000);
 					},
 					error:function(){
 						// ошибка

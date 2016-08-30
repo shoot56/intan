@@ -251,11 +251,11 @@ small {
 	position: absolute;
 	top: 0;
 	right: 0;
-	display: -webkit-box;
+	/* display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: flex;
+	display: flex; */
 	width: 133px;
 	height: 133px;
 	border-radius: 500px;
@@ -268,6 +268,7 @@ small {
 .main-promo .consult-info span {
 	margin: auto;
 	display: block;
+	padding: 40px 20px;
 }
 .text-slider-section {
 	background: #94c11f;
@@ -324,16 +325,19 @@ small {
 	list-style:none;
 }
 .how-work-slider .visual {
-	display: -webkit-box;
+	/* display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: flex;
+	display: flex; */
 	height: 185px;
+	line-height: 185px;
 	padding: 0 0 0 50px;
+	text-align: center;
 }
 .how-work-slider .visual img {
-	margin: auto;
+	/* margin: auto; */
+	vertical-align: middle;
 }
 .how-work-title {
 	font:30px/34px 'pf_din_text_cond_prolight', sans-serif;
