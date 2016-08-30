@@ -1,11 +1,15 @@
 $(document).ready(function(){
 	initPlayerForm();
 	$('<div class="FixMobile"></div>').appendTo('body');
+	if($('.FixMobile').is(':visible')){
+		new WOW().init();
+	}
 	setTimeout(function(){
 		$('.text-slider-list').bxSlider({
 			pager: false,
 			auto: true
 		});
+		$('.text-slider').addClass('sliderActive');
 	}, 250);
 	$('.how-work-list').bxSlider({
 		pagerCustom: '#bx-pager'
@@ -70,9 +74,7 @@ $(document).ready(function(){
 	yMapInitNvr();
 	yMapInitKrd();
 	// scroll animate
-	if($('.FixMobile').is(':visible')){
-		new WOW().init();
-	}
+	
 	// masked input
 	if("mask" in $.fn){
 		$('.phone-input').mask("+7 (999) 999 - 99 - 99");
@@ -230,16 +232,16 @@ yMapInitKrd = function(){
        }, {
             iconLayout: 'default#image',
             iconImageHref: 'images/map-marker1.png',
-            iconImageSize: [42, 51],
-            iconImageOffset: [-21, -25]
+            iconImageSize: [44, 46],
+            iconImageOffset: [-22, -23]
         });
         var myPlacemark1 = new ymaps.Placemark([45.0595422, 39.027488], {
             balloonContent: 'Восточно-Кругликовская, д. 46/11; <br>261-60-04'
         }, {
              iconLayout: 'default#image',
-             iconImageHref: 'images/map-marker.png',
-             iconImageSize: [44, 46],
-             iconImageOffset: [-22, -23]
+             iconImageHref: 'images/map-marker1.png',
+            iconImageSize: [44, 46],
+            iconImageOffset: [-22, -23]
          });
         myMap.geoObjects.add(myPlacemark);
         myMap.geoObjects.add(myPlacemark1);

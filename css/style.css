@@ -284,7 +284,11 @@ small {
 	list-style:none;
 }
 .text-slider {
+	opacity: 0;
 	position: relative;
+}
+.text-slider.sliderActive {
+	opacity: 1;
 }
 .bx-next,
 .bx-prev {
